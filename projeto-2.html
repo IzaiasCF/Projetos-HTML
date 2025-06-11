@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Olá, Mundo com Animação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #a86d6d;
+        }
+
+        .mensagem {
+            font-size: 2em;
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .mensagem.aparecer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .resultado {
+            font-size: 1.5em;
+            color: pink;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .resultado.mostrar {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mensagem" id="mensagem">Olá, mundo!</div>
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Exibe a mensagem com animação
+        const mensagem = document.getElementById('mensagem');
+        setTimeout(() => {
+            mensagem.classList.add('aparecer');
+        }, 500);
+
+        // Faz a soma com um pequeno delay e exibe com animação
+        const a = 50;
+        const b = 100000000000;
+        const resultado = document.getElementById('resultado');
+
+        setTimeout(() => {
+            const soma = a + b;
+            resultado.textContent = "Quanto mais simples, melhor!";
+            resultado.classList.add('mostrar');
+            console.log(soma); // Também exibe no console
+        }, 2000);
+    </script>
+
+</body>
+</html>
