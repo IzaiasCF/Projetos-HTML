@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "apinix.indent-jump"
+        "apinix.indent-jump",
+        "formulahendry.code-runner"
     ]
 }
