@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jogo da Velha</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
+    <body>
+        <h1>Jogo da Velha</h1>
 
-    <h1>Jogo da Velha</h1>
+        <div id="placar">
+            <span>Placar - X: <span id="scoreX">0</span></span> |
+            <span>O: <span id="scoreO">0</span></span>
+        </div>
 
-    <div id="placar">
-        <span>Placar - X: <span id="scoreX">0</span></span> |
-        <span>O: <span id="scoreO">0</span></span>
-    </div>
+        <div id="game-board"></div>
 
-    <div id="game-board"></div>
+        <p id="message"></p>
+        <button onclick="restartGame()">Reiniciar</button>
 
-    <p id="message"></p>
-    <button onclick="restartGame()">Reiniciar</button>
+        <!-- Sons -->
+        <audio id="click-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
+        <audio id="win-sound" src="https://www.soundjay.com/human/sounds/applause-01.mp3"></audio>
 
-    <!-- Sons -->
-    <audio id="click-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
-    <audio id="win-sound" src="https://www.soundjay.com/human/sounds/applause-01.mp3"></audio>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 
 </html>
